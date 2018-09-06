@@ -1,6 +1,6 @@
 import * as React from "react";
 import { render } from "react-dom";
-import "antd/dist/antd.less";
+import "antd/dist/antd.css";
 
 import App from "./App";
 
