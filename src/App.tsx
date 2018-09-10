@@ -9,10 +9,6 @@ const App = () => {
     <BrowserRouter>
       <ApolloProvider client={apolloClient}>
         <div>
-          <nav>
-            <Link to="/table">Table</Link>
-          </nav>
-
           <div>
             <Switch>
               <Route path="/table" component={Table} />

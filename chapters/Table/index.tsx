@@ -1,17 +1,17 @@
 import * as React from "react";
 
-import { Button, Table, Row, Col } from "antd";
+import { Table } from "antd";
 
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 
 export default () => {
   return (
-    <Row>
+    <div style={{ padding: "2rem" }}>
       <Query
         query={gql`
           query {
-            posts(limit: 10) {
+            posts {
             id,
               title
             }
@@ -30,6 +30,7 @@ export default () => {
           const dataSource = data.posts || [];
           return (
             <Table
+              rowKey={record => record.id}
               size="small"
               loading={loading}
               dataSource={dataSource}
@@ -38,6 +39,6 @@ export default () => {
           );
         }}
       </Query>
-    </Row>
+    </div>
   );
 };
