@@ -9,6 +9,7 @@ export default () => {
   return (
     <div style={{ padding: "2rem" }}>
       <Query
+        skip
         query={gql`
           query {
             posts {
