@@ -5,6 +5,8 @@ import apolloClient from "./apolloClient";
 
 import Table from "../chapters/Table";
 import TableLimit from "../chapters/Table/limit";
+import TableCreate from "../chapters/Table/create";
+import TablePagination from "../chapters/Table/pagination";
 
 const App = () => {
   return (
@@ -15,6 +17,12 @@ const App = () => {
             <Switch>
               <Route exact path="/table" component={Table} />
               <Route exact path="/table/limit" component={TableLimit} />
+              <Route exact path="/table/create" component={TableCreate} />
+              <Route
+                exact
+                path="/table/pagination"
+                component={TablePagination}
+              />
             </Switch>
           </div>
         </div>
